@@ -1,0 +1,389 @@
+{
+	"info": {
+		"_postman_id": "fca351e6-680a-4251-90cd-bf24fed88bd4",
+		"name": "week6-heroku",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20426502"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "獲得使用者資料",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmE1YmQ1NDU1NDdhYjdkNDkxMzJlZDgiLCJpYXQiOjE2NTUwMjkxMjAsImV4cCI6MTY1NTQ2MTEyMH0.8g47pfdliInUG76uUMNCpUn8ZxCZcor2ys8kFE40RdY",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://stormy-cove-15869.herokuapp.com/api/users/profile",
+							"protocol": "https",
+							"host": [
+								"stormy-cove-15869",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"users",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "編輯使用者資料",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmE1YmQ1NDU1NDdhYjdkNDkxMzJlZDgiLCJpYXQiOjE2NTUwMjkxMjAsImV4cCI6MTY1NTQ2MTEyMH0.8g47pfdliInUG76uUMNCpUn8ZxCZcor2ys8kFE40RdY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"photo\": \"\",\r\n    \"nickname\": \"yas\",\r\n    \"gender\": \"女性\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://stormy-cove-15869.herokuapp.com/api/users/profile",
+							"protocol": "https",
+							"host": [
+								"stormy-cove-15869",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"users",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "註冊",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"wang@sss.lin\",\r\n    \"password\": \"Ab123456\",\r\n    \"comfirmPassword\":\"Ab123456\",\r\n    \"nickname\": \"s $\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://stormy-cove-15869.herokuapp.com/api/users/sign_up",
+							"protocol": "https",
+							"host": [
+								"stormy-cove-15869",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"users",
+								"sign_up"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "登入",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"wang@sss.lin\",\r\n    \"password\": \"Yy987654321\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://stormy-cove-15869.herokuapp.com/api/users/sign_in",
+							"protocol": "https",
+							"host": [
+								"stormy-cove-15869",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"users",
+								"sign_in"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "重設密碼",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmE1YmQ1NDU1NDdhYjdkNDkxMzJlZDgiLCJpYXQiOjE2NTUwMjkxMjAsImV4cCI6MTY1NTQ2MTEyMH0.8g47pfdliInUG76uUMNCpUn8ZxCZcor2ys8kFE40RdY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"password\": \"Yy987654321\",\r\n    \"comfirmPassword\": \"Yy987654321\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://stormy-cove-15869.herokuapp.com/api/users/updatePassword",
+							"protocol": "https",
+							"host": [
+								"stormy-cove-15869",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"users",
+								"updatePassword"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "post",
+			"item": [
+				{
+					"name": "獲得所有貼文",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmE1YmQ1NDU1NDdhYjdkNDkxMzJlZDgiLCJpYXQiOjE2NTUwMzU4ODQsImV4cCI6MTY1NTAzNTg4NH0.tBrdhg3l4fakJ13ULrAn-457SrvodQQ6phcgMOdkPuY",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://stormy-cove-15869.herokuapp.com/api/posts?sort=&q=",
+							"protocol": "https",
+							"host": [
+								"stormy-cove-15869",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"posts"
+							],
+							"query": [
+								{
+									"key": "sort",
+									"value": ""
+								},
+								{
+									"key": "q",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "新增貼文",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmE1YmQ1NDU1NDdhYjdkNDkxMzJlZDgiLCJpYXQiOjE2NTUwMzU2NzcsImV4cCI6MTY1NTQ2NzY3N30.VVaFd_io1HIPcgrUJ-JUla_DWz2EHywzLS2_-zk1oso",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"content\": \"new DAAY\",\r\n    \"photo\": \" bbbb\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://stormy-cove-15869.herokuapp.com/api/post",
+							"protocol": "https",
+							"host": [
+								"stormy-cove-15869",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"post"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "編輯單一貼文",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmE1YmQ1NDU1NDdhYjdkNDkxMzJlZDgiLCJpYXQiOjE2NTUwMjkxMjAsImV4cCI6MTY1NTQ2MTEyMH0.8g47pfdliInUG76uUMNCpUn8ZxCZcor2ys8kFE40RdY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"content\": \"5:10 \",\r\n    \"photo\": \"ddd\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://stormy-cove-15869.herokuapp.com/api/post/62a5be1e5547ab7d49132ef0",
+							"protocol": "https",
+							"host": [
+								"stormy-cove-15869",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"post",
+								"62a5be1e5547ab7d49132ef0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "刪除單一貼文",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmE1YmQ1NDU1NDdhYjdkNDkxMzJlZDgiLCJpYXQiOjE2NTUwMjkxMjAsImV4cCI6MTY1NTQ2MTEyMH0.8g47pfdliInUG76uUMNCpUn8ZxCZcor2ys8kFE40RdY",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://stormy-cove-15869.herokuapp.com/api/post/62a5be165547ab7d49132eea",
+							"protocol": "https",
+							"host": [
+								"stormy-cove-15869",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"post",
+								"62a5be165547ab7d49132eea"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "點讚貼文",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmE1YmQ1NDU1NDdhYjdkNDkxMzJlZDgiLCJpYXQiOjE2NTUwMjkxMjAsImV4cCI6MTY1NTQ2MTEyMH0.8g47pfdliInUG76uUMNCpUn8ZxCZcor2ys8kFE40RdY",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://stormy-cove-15869.herokuapp.com/api/post/62a5be195547ab7d49132eed/like",
+							"protocol": "https",
+							"host": [
+								"stormy-cove-15869",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"post",
+								"62a5be195547ab7d49132eed",
+								"like"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "收回讚貼文",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmE1YmQ1NDU1NDdhYjdkNDkxMzJlZDgiLCJpYXQiOjE2NTUwMjkxMjAsImV4cCI6MTY1NTQ2MTEyMH0.8g47pfdliInUG76uUMNCpUn8ZxCZcor2ys8kFE40Rd",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\": \"62987d725125f85ad6700280\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://stormy-cove-15869.herokuapp.com/api/post/62a5be195547ab7d49132eed/like",
+							"protocol": "https",
+							"host": [
+								"stormy-cove-15869",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"post",
+								"62a5be195547ab7d49132eed",
+								"like"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

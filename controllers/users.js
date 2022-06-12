@@ -94,7 +94,11 @@ const userController = {
     const keys = ['photo', 'nickname', 'gender'];
     const updateEntries = Object.entries(req.body).filter(item => keys.includes(item[0]) && item[1]);
     const updateData = Object.fromEntries(updateEntries);
-    const updatedProfile = await userModel.findByIdAndUpdate(req.userId, updateData).select('_id photo nickname gender');
+    const updatedProfile = await userModel.findByIdAndUpdate(
+      req.userId,
+      updateData,
+      { new: true }
+    ).select('_id photo nickname gender');
     handleSuccess(res, updatedProfile);
   })
 }
